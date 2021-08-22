@@ -1,5 +1,5 @@
 /*---------------------------------------------
-Template name:  jironis
+Template name:  MultisShop
 Version:        1.0
 Author:         layerdrops
 Author Email:   layerdrops@gmail.com
@@ -54,7 +54,7 @@ We may release future updates so it will overwrite this file. it's better and sa
                 if($(this).scrollTop() < 100){
                     $('.main-header').removeClass('sticky fadeInDown')
                 }else
-                    $('.main-header').addClass('sticky fadeInDown')        
+                    $('.main-header').addClass('sticky fadeInDown')
                 });
 
             /* 02: Background image
@@ -119,18 +119,18 @@ $('.feature-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            
+
         },
         575: {
             items: 1,
-            
+
         },
         768: {
             items: 2
         },
         991: {
             items: 2
-        },  
+        },
         992: {
             items: 3
         }
@@ -170,11 +170,11 @@ $('.feature-carousel').owlCarousel({
         var imgID = $img.attr('id');
         var imgClass = $img.attr('class');
         var imgURL = $img.attr('src');
-    
+
         jQuery.get(imgURL, function(data) {
             // Get the SVG tag, ignore the rest
             var $svg = jQuery(data).find('svg');
-    
+
             // Add replaced image's ID to the new SVG
             if(typeof imgID !== 'undefined') {
                 $svg = $svg.attr('id', imgID);
@@ -183,18 +183,18 @@ $('.feature-carousel').owlCarousel({
             if(typeof imgClass !== 'undefined') {
                 $svg = $svg.attr('class', imgClass+' replaced-svg');
             }
-    
+
             // Remove any invalid XML tags as per http://validator.w3.org
             $svg = $svg.removeAttr('xmlns:a');
-            
+
             // Check if the viewport is set, else we gonna set it if we can.
             if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
                 $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'));
             }
-    
+
             // Replace image with new SVG
             $img.replaceWith($svg);
-    
+
         }, 'xml');
     });
 
@@ -202,7 +202,7 @@ $('.feature-carousel').owlCarousel({
             06: Ajax Contact Form
         ==============================================*/
 
-      
+
          $('.contact-form').on('submit', 'form', function(e) {
             e.preventDefault();
 
@@ -213,8 +213,8 @@ $('.feature-carousel').owlCarousel({
                 $el.parent('.contact-page-form').find('.form-response').html('<span>' + res[1] + '</span>');
             });
         });
-      
-    
+
+
     /*============================================
         07: Preloader
     ==============================================*/
@@ -254,12 +254,12 @@ $('.feature-carousel').owlCarousel({
             }, {offset: '93%'});
         });
     });
- 
+
     /*=========================================================
         09: counter up
     =========================================================*/
            $('.counter').counterUp({});
-        
+
     /*====================================================
         10: Parallax
     ====================================================*/
@@ -272,7 +272,7 @@ $('.feature-carousel').owlCarousel({
                 });
             });
         }
-  
+
 
 
     /* 16: video popup */
@@ -285,7 +285,7 @@ $('.feature-carousel').owlCarousel({
         $('.single-price-plan').on('mouseenter', function(){
             $(this).addClass('active').parent().siblings().find('.single-price-plan').removeClass('active');
         })
-        
+
  /*=====================================================
     13: partner carousel
 =====================================================*/
@@ -394,7 +394,7 @@ $('.feature-carousel').owlCarousel({
             $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo2.png')
         } else if ($(window).width() <=975){
             $('.main-header.header-2 .logo .main-logo2').attr('src', 'assets/img/logo.png')
-        } 
+        }
 
 
 })(jQuery);
