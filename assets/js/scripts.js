@@ -1,5 +1,5 @@
 /*---------------------------------------------
-Template name:  MultisShop
+Template name:  MultiShop
 Version:        1.0
 Author:         layerdrops
 Author Email:   layerdrops@gmail.com
